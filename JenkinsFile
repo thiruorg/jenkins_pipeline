@@ -10,5 +10,12 @@ node {
        sh './gradlew build'
    }
 
+   stage ('archive'){
+
+       archiveArtifacts artifacts: '/var/jenkins_home/workspace/First_PipeLine/build/libs/*.jar', fingerprint: true, onlyIfSuccessful: true
+   
+   }
+
+
 
 }
