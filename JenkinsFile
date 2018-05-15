@@ -15,7 +15,12 @@ node {
      archiveArtifacts artifacts: '/build/libs/*', fingerprint: true, onlyIfSuccessful: true
    
    }
+   
+   stage ('stashing'){
 
+     stash allowEmpty: true, name: 'everything'
+
+   }
 
 
 }
