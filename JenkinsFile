@@ -10,11 +10,7 @@ node {
        sh './gradlew build'
    }
 
-   stage ('archive'){
 
-     archiveArtifacts artifacts: '/build/libs/*', fingerprint: true, onlyIfSuccessful: true
-   
-   }
    
    stage ('stashing'){
 
