@@ -1,13 +1,12 @@
 node {
-   echo 'Hello World'
-
       
 
    stage('cloning') {
     // some block
-     git 'https://github.com/christophherrmann/JenkinsFastlaneExample'
+     git 'https://github.com/thirumoorthir/rundeck-puppetenterprise-nodes-plugin.git'
 }
-echo 'Clone Complete'
+
+
 
 
 }
