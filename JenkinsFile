@@ -6,7 +6,9 @@ node {
      git 'https://github.com/thirumoorthir/rundeck-puppetenterprise-nodes-plugin.git'
 }
 
-
+   stage ('building code'){
+       sh './gradlew build'
+   }
 
 
 }
