@@ -1,0 +1,13 @@
+node {
+   echo 'Hello World'
+
+      
+
+   stage('cloning') {
+    // some block
+     git 'https://github.com/christophherrmann/JenkinsFastlaneExample'
+}
+echo 'Clone Complete'
+
+
+}
