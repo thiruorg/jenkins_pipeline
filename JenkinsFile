@@ -18,5 +18,23 @@ node {
 
    }
 
+// code for changing variables based on environment 
+
+if ("DEV".equals(Environment)){
+    def map = ["Server": 'Sname',"SqlUsername": 'seq_dev']
+    return map
+} else if ("QA".equals(Environment)){
+    def map = ["Server": 'Sname',"SqlUsername": 'sa']
+    return map
+} else if ("UAT".equals(Environment)){
+    def map = ["Server": 'Sname',"SqlUsername": 'seq_db']
+    return map    
+} else if ("PROD".equals(Environment)){
+    def map = ["Server": 'Sname',"SqlUsername": 'seq_db']
+    return map    
+} else {
+    return null;
+}
+
 
 }
